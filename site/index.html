@@ -91,6 +91,42 @@
                     Who is going to SusHack?
                 </h2>
                 <article ng-controller="AttendeeController">
+                    <form ng-submit="add_attendee()" name="new_attendee_form">
+                        <label>
+                            <input
+                                type="text"
+                                ng-model="new_attendee.name"
+                                placeholder="Your name"
+                                required
+                            />
+                        </label>
+                        <label>
+                            <input
+                                type="email"
+                                ng-model="new_attendee.email"
+                                placeholder="Your email"
+                                required
+                            />
+                        </label>
+                        <label>
+                            <input
+                                type="text"
+                                ng-model="new_attendee.twitter_username"
+                                placeholder="Your twitter username"
+                            />
+                        </label>
+                        <label>
+                            <input
+                                type="text"
+                                ng-model="new_attendee.github_username"
+                                placeholder="Your github username"
+                            />
+                        </label>
+                        <button type="submit" ng-disabled="new_attendee_form.$invalid">
+                            Attend
+                        </button>
+                    </form>
+
                     <ul>
                         <li ng-repeat="attendee in attendees">
                             {{ attendee.name }}
@@ -212,6 +248,7 @@
         </section>
     </div>
 
+    <script src="/assets/js/lib/md5.js"></script>
     <script src="/assets/js/lib/angular.min.js"></script>
     <script src="/assets/js/sushack.js"></script>
 </body>
