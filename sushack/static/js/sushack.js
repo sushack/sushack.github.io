@@ -7,7 +7,7 @@
         $scope.new_attendee = {};
         $scope.attendees = [];
 
-        $http.get('http://localhost:5000/get_attendees').success(function (attendees) {
+        $http.get('/get_attendees').success(function (attendees) {
             $scope.attendees = attendees;
         });
 
