@@ -60,7 +60,20 @@ h1 {
 
 }
 .section-4 {
+    form {
+        padding: 40px 0;
 
+        .form-element {
+            display: block;
+            clear: both;
+            margin-bottom: 20px;
+
+            input {
+                padding: 5px;
+                box-sizing: border-box;
+            }
+        }
+    }
 }
 .section-5 {
 

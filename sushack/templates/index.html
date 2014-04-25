@@ -83,60 +83,75 @@
 
             </div>
         </section>
-        <section class="section section-4">
+        <section class="section section-4" ng-controller="AttendeeController">
             <div class="section-top">
 
             </div>
             <div class="section-middle">
                 <h2>
-                    Who is going to SusHack?
+                    Want to come to SusHack?
                 </h2>
-                <article ng-controller="AttendeeController">
+                <article>
                     <form ng-submit="add_attendee()" name="new_attendee_form">
-                        <label>
+                        <div class="form-element">
                             <input
                                 type="text"
                                 ng-model="new_attendee.name"
-                                placeholder="Your name"
+                                placeholder="Name"
                                 required
                             />
-                        </label>
-                        <label>
+                        </div>
+                        <div class="form-element">
                             <input
                                 type="email"
                                 ng-model="new_attendee.email"
-                                placeholder="Your email"
+                                placeholder="Email"
                                 required
                             />
-                        </label>
-                        <label>
+                        </div>
+                        <div class="form-element">
                             <input
                                 type="text"
                                 ng-model="new_attendee.twitter_username"
-                                placeholder="Your twitter username"
+                                placeholder="Twitter username"
                             />
-                        </label>
-                        <label>
+                        </div>
+                        <div class="form-element">
                             <input
                                 type="text"
                                 ng-model="new_attendee.github_username"
-                                placeholder="Your github username"
+                                placeholder="Github username"
                             />
-                        </label>
+                        </div>
                         <button type="submit" ng-disabled="new_attendee_form.$invalid">
                             Attend
                         </button>
                     </form>
-
+                </article>
+                <h2>
+                    Who is going to SusHack?
+                </h2>
+                <article>
                     <ul>
                         <li ng-repeat="attendee in attendees">
                             {{ attendee.name }}
-                            <img ng-src="{{ attendee.image_url }}" alt="Picture of {{ attendee.name }}"/>
+                            <img
+                                ng-src="{{ attendee.image_url }}"
+                                alt="Picture of {{ attendee.name }}"
+                            />
                             <span ng-if="attendee.github_username">
-                                <a href="http://github.com/{{ attendee.github_username }}">github</a>
+                                <a
+                                    href="http://github.com/{{ attendee.github_username }}"
+                                >
+                                    Github
+                                </a>
                             </span>
                             <span ng-if="attendee.twitter_username">
-                                <a href="http://twitter.com/{{ attendee.twitter_username }}">twitter</a>
+                                <a
+                                    href="http://twitter.com/{{ attendee.twitter_username }}"
+                                >
+                                    Twitter
+                                </a>
                             </span>
                         </li>
                     </ul>
