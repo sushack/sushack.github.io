@@ -144,6 +144,40 @@ article {
     float: left;
     clear: left;
 }
+
+.attendees {
+    overflow: hidden;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        margin: 0 0 20px;
+        padding: 0;
+        list-style: none;
+        width: 50%;
+
+        img {
+            float: left;
+            margin-right: 20px;
+            border: 2px solid #fff;
+        }
+        span {
+            clear: right;
+            display: block;
+        }
+    }
+}
+@media screen and (max-width: 1400px) {
+
+    .attendees {
+        li {
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     body {
         font-size: 18px;

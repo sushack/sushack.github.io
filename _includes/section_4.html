@@ -1,4 +1,3 @@
-<h2>
 <h2 id="attend">
     How can you sign up for SusHack?
 </h2>
@@ -13,25 +12,29 @@
         We'll expand on these details a bit more later.
     </p>
 </article>
+<h2 id="attendees">
     Who is going to SusHack?
 </h2>
 <article>
-    <ul>
+    <ul class="attendees">
         {% for attendee in site.data.attendees %}
         <li>
-            {{ attendee.name }}
+
             <img
                 src="http://www.gravatar.com/avatar/{{ attendee.email_hash }}.jpg?s=100"
                 alt="Picture of {{ attendee.name }}"
             />
-            <span ng-if="attendee.github_username">
+            <span>
+                {{ attendee.name }}
+            </span>
+            <span>
                 <a
                     href="http://github.com/{{ attendee.github_username }}"
                 >
                     Github
                 </a>
             </span>
-            <span ng-if="attendee.twitter_username">
+            <span>
                 <a
                     href="http://twitter.com/{{ attendee.twitter_username }}"
                 >
