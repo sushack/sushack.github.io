@@ -1,5 +1,26 @@
+// imports
 @import "_norm";
 
+// variables
+$base_font_size: 23px;
+
+// mixins and functions
+@mixin remify($property, $sizes...) {
+    $sizes-rem: ();
+    $sizes-px: ();
+    @each $size in $sizes {
+        $rem-as-px: floor($size * $base_font_size);
+        $sizes-rem: append($sizes-rem, #{strip-units($size)}rem);
+        $sizes-px: append($sizes-px, #{strip-units($rem-as-px)}px);
+    }
+    #{$property}: $sizes-px;
+    #{$property}: $sizes-rem;
+}
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+// styles
 @font-face {
     font-family: 'archive';
     src: url('archive-webfont.eot');
@@ -10,10 +31,12 @@
     font-weight: normal;
     font-style: normal;
 }
+html {
+    font-size: 23px;
+}
 body {
     color: #fff;
     background-color: #1a1a1a;
-    font-size: 28px;
     text-shadow: 0 0 5px rgba(0,0,0,.5);
 }
 a, a:link, a:visited {
@@ -50,6 +73,9 @@ h1 {
 .section {
     background-color: rgba(0,0,0,.3);
 }
+.section-0 {
+
+}
 .section-1 {
 
 }
@@ -61,15 +87,16 @@ h1 {
 }
 .section-4 {
     form {
-        padding: 40px 0;
+        @include remify(padding, 2, 0);
 
         .form-element {
             display: block;
             clear: both;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
+            @include remify(margin-bottom, 1);
 
             input {
-                padding: 5px;
+                @include remify(padding, .22);
                 box-sizing: border-box;
             }
         }
@@ -82,9 +109,6 @@ h1 {
 
 }
 .section-7 {
-
-}
-.section-8 {
 
 }
 .white {
@@ -124,20 +148,26 @@ h1 {
 
 h2 {
     text-transform: uppercase;
-    font-size: 40px;
+    @include remify(font-size, 1.5);
     letter-spacing: .01em;
     color: #fff;
-    border-bottom: 10px solid rgba(255,255,255,.5);
+    border-bottom: 5px solid rgba(255,255,255,.5);
 }
 .white h2 {
     color: #333;
-    border-bottom: 10px solid rgba(0,0,0,.3);
+    border-bottom-color: rgba(0,0,0,.3);
 }
 h2,
 article {
     float: right;
     clear: right;
     width: 60%;
+}
+ol {
+    li {
+        margin-bottom: 1em;
+        @include remify(font-size, .8);
+    }
 }
 .white h2,
 .white article {
@@ -147,13 +177,13 @@ article {
 
 .attendees {
     overflow: hidden;
-    margin: 20px 0;
+    @include remify(margin, 1, 0);
     padding: 0;
     list-style: none;
 
     li {
         float: left;
-        margin: 0 0 20px;
+        @include remify(margin, 0, 0, 1);
         padding: 0;
         list-style: none;
         width: 50%;
@@ -161,7 +191,8 @@ article {
         img {
             float: left;
             margin-right: 20px;
-            border: 2px solid #fff;
+            @include remify(margin-right, 1);
+            border: 5px solid rgba(0,0,0,.3);
         }
         span {
             clear: right;
