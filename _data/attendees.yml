@@ -3,10 +3,13 @@
 # Available at http://www.sushack.co.uk/#attend
 #
 # email_hash is an md5 hash of your email address, used to
-# display your Gravatar. You can generate this using your 
-# terminal. Instructions may vary for your platform.
+# display your Gravatar. You can generate this using an online
+# serviceu such as http://onlinemd5.com/ or using your terminal. 
+# 
+# Instructions may vary for your platform.
 #
 # echo -n "your@email.com" | md5sum
+#
 # # # #
 - name: Max Glenister
   github_username: omgmog
