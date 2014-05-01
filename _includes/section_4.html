@@ -1,61 +1,15 @@
-<h2 id="attend">
-    How can you sign up for SusHack?
+<h2>
+    When and where is SusHack?
 </h2>
 <article>
-    <ol>
-        <li>
-            Create a <a href="https://github.com/join" target="_blank">Github account</a>, or sign in with your Github account.
-        </li>
-        <li>
-            Go to our <a href="https://github.com/omgmog/sushack.co.uk/blob/gh-pages/_data/attendees.yml"><code>attendees.yml</code></a> file on Github.
-        </li>
-        <li>
-            Click the 'Edit' button'.
-        </li>
-        <li>
-            Add your details, in the same format as the other attendees. You can generate an md5 of your email address either using the terminal as it says at the top of <code>attendees.yml</code>, or using an online service such as <a href="http://onlinemd5.com/">http://onlinemd5.com/</a>.
-        </li>
-        <li>
-            When you're done, click 'Propose file change' at the bottom of the page.
-        </li>
-        <li>
-            On the next page, just click 'Send pull request'.
-        </li>
-        <li>
-            Now just wait for us to approve your change, and then you'll find yourself on the attendees list!
-        </li>
-    </ol>
-</article>
-<h2 id="attendees">
-    Who is going to SusHack?
-</h2>
-<article>
-    <ul class="attendees">
-        {% for attendee in site.data.attendees %}
-        <li>
-
-            <img
-                src="http://www.gravatar.com/avatar/{{ attendee.email_hash }}.jpg?s=100"
-                alt="Picture of {{ attendee.name }}"
-            />
-            <span>
-                {{ attendee.name }}
-            </span>
-            <span>
-                <a
-                    href="http://github.com/{{ attendee.github_username }}"
-                >
-                    Github
-                </a>
-            </span>
-            <span>
-                <a
-                    href="http://twitter.com/{{ attendee.twitter_username }}"
-                >
-                    Twitter
-                </a>
-            </span>
-        </li>
-        {% endfor %}
-    </ul>
+    <p>
+        SusHack #2 will be held on <strong>Saturday June 28th 2014</strong>, at the 2degrees office in Summertown, Oxfordshire.
+    </p>
+    <p>
+        Here is a map, and the full address:
+    </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.6196205940646!2d-1.2644372711647136!3d51.77656068087439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c41143bea253%3A0x98064b8639175546!2s2degrees!5e0!3m2!1sen!2suk!4v1398955098253" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+    <p>
+        2degrees, 228 Banbury Road, Oxford, OX2 7BY
+    </p>
 </article>
