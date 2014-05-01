@@ -13,7 +13,7 @@ title: "SusHack #2: Sustainability-themed hackday in Oxford on June 28th 2014"
 </head>
 <body>
     <div class="wrapper">
-        {% for i in (0..7) %}
+        {% for i in (0..6) %}
             <section
                 class="section {% cycle '', 'white ' %}section-{{ i }}"
             >
@@ -33,13 +33,18 @@ title: "SusHack #2: Sustainability-themed hackday in Oxford on June 28th 2014"
                         {% include section_5.html %}
                     {% elsif i == 6 %}
                         {% include section_6.html %}
-                    {% elsif i == 7 %}
-                        {% include section_7.html %}
                     {% endif %}
                 </div>
                 <div class="section-bottom"></div>
             </section>
         {% endfor %}
+        <section
+            class="section section-7"
+        >
+            <div class="section-middle">
+                {% include section_7.html %}
+            </div>
+        </section>
     </div>
 </body>
 </html>
