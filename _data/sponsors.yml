@@ -1,0 +1,9 @@
+- name: 2degrees
+  url: http://www.2degreesnetwork.com
+  logo:
+- name: Marmalade &amp; Jam
+  url: http://www.marmaladeandjam.co.uk
+  logo:
+- name: Github
+  url: http://www.github.com
+  logo:
