@@ -1,9 +1,9 @@
 - name: 2degrees
   url: http://www.2degreesnetwork.com
-  logo:
+  logo: 2degrees-logo.png
 - name: Marmalade &amp; Jam
   url: http://www.marmaladeandjam.co.uk
-  logo:
+  logo: mandj-logo.png
 - name: Github
   url: http://www.github.com
-  logo:
+  logo: github-logo.png
