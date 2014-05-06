@@ -6,7 +6,7 @@
 # display your Gravatar. You can generate this using an online
 # service such as http://onlinemd5.com/ or using your terminal. 
 # 
-# Instructions may vary for your platform.
+# Instructions may vary for your platform (use `md5` on osx).
 #
 # echo -n "your@email.com" | md5sum
 #
@@ -41,3 +41,7 @@
   twitter_username: simonredding
   email_hash: 97BE3D02F1F178FCF312C3AFFF00F1EE
   
+- name: Ben Foxall
+  github_username: benfoxall
+  twitter_username: benjaminbenben
+  email_hash: d5f36cb3a2b97a68cc812d985726b5dd
