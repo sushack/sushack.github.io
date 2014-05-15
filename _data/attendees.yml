@@ -4,7 +4,7 @@
 #
 # email_hash is an md5 hash of your email address, used to
 # display your Gravatar. You can generate this using an online
-# service such as http://onlinemd5.com/ or using your terminal.
+# service such as http://www.md5.cz/ or using your terminal.
 #
 # Instructions may vary for your platform (use `md5` on osx).
 #
