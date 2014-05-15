@@ -4,8 +4,8 @@
 #
 # email_hash is an md5 hash of your email address, used to
 # display your Gravatar. You can generate this using an online
-# service such as http://onlinemd5.com/ or using your terminal. 
-# 
+# service such as http://onlinemd5.com/ or using your terminal.
+#
 # Instructions may vary for your platform (use `md5` on osx).
 #
 # echo -n "your@email.com" | md5sum
@@ -15,7 +15,7 @@
   github_username: omgmog
   twitter_username: omgmog
   email_hash: cb137dcc8b625d24ff5743a37075c839
-  
+
 - name: Gil Goncalves
   github_username: lurst
   twitter_username: lurst
@@ -35,12 +35,12 @@
   github_username: iblamefish
   twitter_username: iblamefish
   email_hash: 494e4122a76b31b98c7f37243f9bb30c
-  
+
 - name: Simon Redding
   github_username: simonredding
   twitter_username: simonredding
   email_hash: 97BE3D02F1F178FCF312C3AFFF00F1EE
-  
+
 - name: Ben Foxall
   github_username: benfoxall
   twitter_username: benjaminbenben
@@ -50,9 +50,13 @@
   github_username: spikeheap
   twitter_username: spikeheap
   email_hash: 9f847aeef61e9466a132b6fdbd980e11
-  
+
 - name: Chris Seymour
   github_username: iiSeymour
   twitter_username: iiSeymour
   email_hash: E7B454A133DC67FE54D058A13BAC9A67
 
+- name: Rich Douglas
+  github_username: richdouglasevans
+  twitter_username: richdevans
+  email_hash: 7A48DFCB39785E6524E005DF09CF0C98
