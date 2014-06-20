@@ -161,7 +161,7 @@ h2,
 article {
     float: right;
     clear: right;
-    width: 60%;
+    width: 70%;
 }
 ol {
     li {
@@ -222,14 +222,6 @@ ol {
         height: auto;
     }
 }
-@media screen and (max-width: 1400px) {
-
-    .attendees {
-        li {
-            width: 100%;
-        }
-    }
-}
 
 @media screen and (max-width: 1200px) {
     body {
@@ -250,5 +242,10 @@ ol {
     }
     .section-middle {
         padding: 10%;
+    }
+    .attendees {
+        li {
+            width: 100%;
+        }
     }
 }
