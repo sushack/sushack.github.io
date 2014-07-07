@@ -21,20 +21,10 @@
   twitter_username: lurst
   email_hash: 43d7035caeafc49de5d7568cbf73175e
 
-- name: Gabor Javorszky
-  github_username: javorszky
-  twitter_username: javorszky
-  email_hash: 3ab39057319da4733d14635fa3f327a6
-
 - name: George Hickman
   github_username: ghickman
   twitter_username: ghickman
   email_hash: e7a09db53f1482fe1ec510c29ad400f0
-
-- name: Clinton Montague
-  github_username: iblamefish
-  twitter_username: iblamefish
-  email_hash: 494e4122a76b31b98c7f37243f9bb30c
 
 - name: Simon Redding
   github_username: simonredding
@@ -50,21 +40,6 @@
   github_username: spikeheap
   twitter_username: spikeheap
   email_hash: 9f847aeef61e9466a132b6fdbd980e11
-
-- name: Chris Seymour
-  github_username: iiSeymour
-  twitter_username: iiSeymour
-  email_hash: e7b454a133dc67fe54d058a13bac9a67
-  
-- name: Rich Douglas
-  github_username: richdouglasevans
-  twitter_username: richdevans
-  email_hash: 7a48dfcb39785e6524e005df09cf0c98
-
-- name: James Billingham
-  bitbucket_username: BillinghamJ
-  twitter_username: BillinghamJ
-  email_hash: ebd12c1c6a5c6e9473f3acfb6abe99a6
 
 - name: Pierre Riteau
   github_username: priteau
@@ -95,9 +70,4 @@
   github_username: rogerhutchings
   twitter_username: drrogg
   email_hash: 2d6ce4ec458bb7f1cdc2181c0df02f19
-
-- name: Dan Cunningham
-  github_username: dancunningham
-  twitter_username: dancunningham
-  email_hash: 979f86f1d22a279a7058f3554edce818
 
