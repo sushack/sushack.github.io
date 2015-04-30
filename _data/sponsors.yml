@@ -7,3 +7,6 @@
 - name: Github
   url: http://www.github.com
   logo: github-logo.png
+- name: Summer of Hacks
+  url: http://summerofhacks.io
+  logo: summer-of-hacks.png
