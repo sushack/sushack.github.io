@@ -1,0 +1,276 @@
+// variables
+$base-font-size: 22px;
+$base-bg-color: #1a1a1a;
+$color-1: #ffffff;
+$color-2: #73a325;
+$color-3: #c2ef8a;
+$color-4: #444;
+$color-5: #333;
+
+// mixins and functions
+@mixin remify($property, $sizes...) {
+  $sizes-rem: ();
+  $sizes-px: ();
+  @each $size in $sizes {
+    $rem-as-px: floor($size * $base-font-size);
+    $sizes-rem: append($sizes-rem, #{strip-units($size)}rem);
+    $sizes-px: append($sizes-px, #{strip-units($rem-as-px)}px);
+  }
+  #{$property}: $sizes-px;
+  #{$property}: $sizes-rem;
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// styles
+@font-face {
+  font-family: 'archive';
+  src: url('archive-webfont.eot');
+  src: url('archive-webfont.eot?#iefix') format('embedded-opentype'),
+       url('archive-webfont.woff') format('woff'),
+       url('archive-webfont.ttf') format('truetype'),
+       url('archive-webfont.svg#archiveregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  background-color: $base-bg-color;
+  color: $color-1;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+a, 
+a:link, 
+a:visited {
+  color: $color-3;
+  text-decoration: underline;
+}
+
+a:active, 
+a:hover {
+  text-decoration: none;
+}
+
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: archive, inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  background-image: url('../img/logo.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  min-height: 600px;
+  overflow: hidden;
+  text-align: center;
+  text-indent: -99em;
+}
+
+.wrapper {
+  background-attachment: fixed;
+  background-image: url('../img/grass.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.section-4 {
+  form {
+    @include remify(padding, 2, 0);
+
+    .form-element {
+      @include remify(margin-bottom, 1);
+      clear: both;
+      display: block;
+    }
+
+    input {
+      @include remify(padding, .22);
+      box-sizing: border-box;
+    }
+  }
+}
+
+.section-top {
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0;
+  padding-top: 6.8%;
+}
+
+.section-middle {
+  overflow: hidden;
+  padding: 5% 15%;
+}
+
+.section-bottom {
+  background-position: 0 top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0;
+  padding-top: 6.8%;
+}
+
+
+h2 {
+  text-transform: uppercase;
+  @include remify(font-size, 1.5);
+  letter-spacing: .01em;
+  color: $color-1;
+  border-bottom: 5px solid rgba(255,255,255,.5);
+}
+
+h2,
+article {
+  clear: right;
+  float: right;
+  width: 70%;
+}
+
+article {
+  ul {
+    margin-bottom: 1em;
+  }
+}
+
+ol {
+  li {
+    @include remify(font-size, .8);
+    margin-bottom: 1em;
+  }
+}
+
+.white {
+  color: $color-4;
+  position: relative;
+  text-shadow: none;
+  z-index: 100;
+
+  a {
+    color: $color-2;
+  }
+
+  .section-top {
+    background-image: url('../img/stripe-white-top.png');
+  }
+
+  .section-middle {
+    background-color: $color-1;
+  }
+
+  .section-bottom {
+    background-image: url('../img/stripe-white-bottom.png');
+  }
+
+  h2 {
+    border-bottom-color: rgba(0, 0, 0, .3);
+    color: $color-5;
+  }
+
+  h2,
+  article {
+    float: left;
+  }
+}
+
+.attendees {
+  @include remify(margin, 1, 0);
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    @include remify(margin, 0, 0, 1);
+    float: left;
+    list-style: none;
+    padding: 0;
+    width: 50%;
+
+    img {
+      @include remify(margin-right, 1);
+      border: 5px solid rgba(0, 0, 0, .3);
+      float: left;
+      margin-right: 20px;
+    }
+
+    span {
+      clear: right;
+      display: block;
+    }
+  }
+}
+
+.sponsors {
+  @include remify(padding, 1, 0, 0);
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+
+  li {
+    @include remify(padding, 1, 0);
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    max-height: 100px;
+    min-width: 50%;
+    text-align: center;
+  }
+
+  img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  .wrapper {
+    background-image: url('../img/grass-medium.jpg');
+  }
+
+  h1 {
+    background-size: contain;
+    margin: 0 5%;
+    min-height: 400px;
+  }
+
+  h2,
+  article {
+    float: none;
+    width: 100%;
+  }
+
+  .section-middle {
+    padding: 10%;
+  }
+
+  .attendees {
+    li {
+      width: 100%;
+    }
+  }
+}

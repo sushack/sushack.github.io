@@ -1,1 +1,4 @@
 safe: true
+
+sass:
+    style: compressed
