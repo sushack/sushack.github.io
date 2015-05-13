@@ -30,12 +30,12 @@
   github_username: spikeheap
   twitter_username: spikeheap
   email_hash: 9f847aeef61e9466a132b6fdbd980e11
-  
+
 - name: Marcus Noble
   github_username: AverageMarcus
   twitter_username: Marcus_Noble_
   email_hash: 714afcbd955579f14cba0cd8f7148dc9
-  
+
 - name: Simon Redding
   github_username: simonredding
   twitter_username: simonredding
@@ -45,3 +45,8 @@
   github_username: thiseldo
   twitter_username: andrewdlindsay
   email_hash: 15b133d6ca440ed6688c490320297b0d
+
+- name: Glyn Hudson
+  github_username: glynhudson
+  twitter_username: glynhudson
+  email_hash: c268c08629a49ba061e891c3ae594601
