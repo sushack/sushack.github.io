@@ -46,24 +46,24 @@ body {
   text-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
-a, 
-a:link, 
+a,
+a:link,
 a:visited {
   color: $color-3;
   text-decoration: underline;
 }
 
-a:active, 
+a:active,
 a:hover {
   text-decoration: none;
 }
 
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
   font-family: archive, inherit;
   font-weight: normal;
@@ -272,5 +272,64 @@ ol {
     li {
       width: 100%;
     }
+  }
+}
+button {
+  background: $color-1;
+  color: $color-5;
+  border: 0;
+  padding: .5em 1em;
+}
+.code-of-conduct {
+  content: '';
+  z-index: 101;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba($color-5, .8);
+  font-size: 18px;
+
+  .modal {
+    position: fixed;
+    width: 60%;
+    max-width: 600px;
+    height: 600px;
+    background: $color-1;
+    text-shadow: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 40px;
+    overflow-y: scroll;
+    box-shadow: 0 4px 12px $color-5;
+
+  }
+
+  h2, h3, p {
+    color: $color-5;
+  }
+  h3 {
+    font-weight: bold;
+  }
+
+  h2,
+  article {
+    float: none;
+    width: auto;
+  }
+  h2 {
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+    border-bottom: 2px solid rgba($color-5, .3);
+  }
+
+  button {
+    padding: 0;
+    line-height: 1;
+    float: right;
   }
 }

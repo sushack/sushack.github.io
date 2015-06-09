@@ -8,4 +8,63 @@
     <p>
         If you've got any project ideas already, you can either email them to <a href="mailto:hello@sushack.co.uk">hello@sushack.co.uk</a> or comment on the <a href="https://github.com/sushack/sushack.github.io/issues/35">SusHack project ideas</a> ticket on GitHub, so that we have ideas to inspire people on the day.
     </p>
+    <p>
+        If you'd like to know how we treat our attendees, check out our code of conduct.
+    </p>
+    <button id="trigger">Show code of conduct</button>
+    <div class="code-of-conduct" id="overlay" style="display: none">
+        <div class="modal">
+            <button id="closebutton">&times;</button>
+            <h2>
+                SusHack code of conduct
+            </h2>
+            <article>
+                <p>All attendees, sponsors, partners, volunteers and staff at our hackathon are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensure a safe environment for everybody.</p>
+
+                <h3>The Quick Version</h3>
+
+                <p>Our hackathon is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, previous hackday attendance or computing experience (or lack of any of the aforementioned). We do not tolerate harassment of hackathon participants in any form. Sexual language and imagery is not appropriate at any hackathon venue, including hacks, talks, workshops, parties, social media and other online media. Hackathon participants violating these rules may be sanctioned or expelled from the hackathon without a refund (if applicable) at the discretion of the hackathon organisers.</p>
+
+                <h3>The Less Quick Version</h3>
+
+                <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, nationality, religion, sexual images in public spaces, deliberate intimidation, stalking, following, photography or audio/video recording against reasonable consent, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
+
+                <p>Photography is encouraged, but other participants must be given a reasonable chance to opt out from being photographed. If they object to the taking of their photograph, comply with their request. It is inappropriate to take photographs in contexts where people have a reasonable expectation of privacy (in bathrooms or where participants are sleeping).</p>
+
+                <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
+
+                <p>As this is a hackathon we like to explicitly note that the hacks created at our hackathon are equally subject to the anti-harassment policy.</p>
+
+                <p>Sponsors and partners are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Sponsor representatives (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment.</p>
+
+                <p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of hackathon staff immediately.</p>
+
+                <p>Hackathon staff will be happy to help participants contact any local security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the hackathon. We value your attendance.</p>
+
+                <p>If a participant engages in harassing behavior, the hackathon organisers may take any action they deem appropriate, including warning the offender or expulsion from the hackathon.</p>
+
+                <p>We expect participants to follow these rules at hackathon and workshop venues and hackathon-related social events.</p>
+            </article>
+        </div>
+    </div>
+    <script>
+    (function(d) {
+        'use strict';
+
+        trigger.onclick = function () {
+            overlay.style.display = 'block';
+            // return false;
+        };
+        overlay.onclick = function (e) {
+            if(e.target === overlay) {
+                this.style.display = 'none';
+            }
+            // return false;
+        };
+        closebutton.onclick = function () {
+            overlay.style.display = 'none';
+            // return false;
+        }
+    }(document));
+    </script>
 </article>
